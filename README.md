@@ -3,7 +3,7 @@ shopify-sort-select-tag
 
 NOTE: An official version of this is here - https://gist.github.com/carolineschnapp/11352987
 
-This was done just a few days ago, worth sharing this version anyway.
+Have noticed after posting this version that Shopify have shared this just a few days ago, possibly worth sharing this anyway.
 
 HTML and JavaScript code for implementing a select tag with all possible sorting options for the page without needing to duplicate each collection.
 
