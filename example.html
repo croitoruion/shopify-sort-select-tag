@@ -1,0 +1,24 @@
+<script>
+  // jquery is already running on the site, so we use it to check the document is ready
+  $(document).ready(function() {
+      // Identify a Select Option from the value in the URL query text
+      // Where this exists as an Option Value, add the 'selected' attribute to the Option
+      // This ensures that when the page reloads the current option will be showing
+      $("#selectSort option[value='{{collection.sort_by}}']").attr('selected', true);
+  });
+</script>
+
+<div>
+  <!-- 
+  The Select Tag watches for a change, then pushes a new window.location using the value
+  of the Option selected by the user
+  -->
+  <select id="selectSort" onchange='window.location="{{ collection.url }}?sort_by=" + this.value'>
+    <option value="price-ascending">Price (lowest first)</option>
+    <option value="price-descending">Price (Highest first)</option>
+    <option value="title-ascending">A-Z</option>
+    <option value="title-descending">Z-A</option>
+    <option value="created-descending">Latest Addition</option>
+    <option value="best-selling">Most Popular</option>
+  </select>
+</div>
